@@ -1,0 +1,73 @@
+---
+metaTitle: Logo Ipsum
+title: Lorem Ipsum Dolor Conference
+signUpCta: Sign up now
+firstVideoSrc: https://www.youtube.com/embed/c4tj7I2-q1s
+secondVideoSrc: https://www.youtube.com/embed/dQw4w9WgXcQ
+firstImgSrc: pic1@2x.png
+secondImgSrc: pic2@2x.png
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>{{ page.metaTitle }}</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+	<body>
+
+		<div class="pageWrapper">
+			<header class="mainMenu">
+				{% include navigation.html %}
+			</header>
+
+			<section class="mainTitle">
+				<div class="halfCol">
+					<h1>{{ page.title }}</h1>
+					<h2>Online <div class="dot"></div></h2>
+				</div>
+				<div class="halfCol">
+					<div class="ctaWrapper">	
+						<button class="signUpCta bigButton" type="button">{{ page.signUpCta }}</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="about halfCol">
+	
+					<article>
+						<div class="floatingBox">
+							{% include about.html %}
+						</div>
+						<div class="attendeeContent">
+							{% include attendee.html %}
+						</div>	
+					</article>
+			</section>
+
+			<section class="mediaContent halfCol">
+				<article class="picture">
+					<img src="assets/img/{{ page.firstImgSrc }}">
+				</article>
+
+				<article class="video">
+					<div class="videoOpener"></div>
+					<iframe src="{{ page.firstVideoSrc }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</article>
+
+				<article class="video">
+					<div class="videoOpener"></div>
+					<iframe src="{{ page.secondVideoSrc }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</article>
+
+				<article class="picture">
+					<img src="assets/img/{{ page.secondImgSrc }}">
+				</article>
+			</section>
+		</div>
+	</body>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</html>
